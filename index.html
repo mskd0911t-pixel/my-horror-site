@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【警告】決して最後まで読んではいけない</title>
+  <!-- Google Fonts から不気味な和風フォント（Noto Serif JP）を読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;900&display=swap" rel="stylesheet">
+  <!-- CSSファイルへのリンク -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 音声演出用の効果音 -->
+  <audio id="scream-sound" src="https://assets.codepen.io/6058761/screamer.mp3" preload="auto"></audio>
+  <audio id="ambient-sound" src="https://assets.codepen.io/6058761/ambient.mp3" loop preload="auto"></audio>
+
+  <!-- 最初の音声再生を促すオーバーレイ（ブラウザの自動再生制限対策） -->
+  <div id="intro-overlay">
+    <div class="intro-box">
+      <p>このページには一部、ショッキングな表現や音響が含まれています。</p>
+      <button id="start-btn">理解して進む</button>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ（スクロールを煽る不気味な長文） -->
+  <main id="main-content">
+    <div class="scroller-indicator">↓ スクロールして読み進めてください...</div>
+    
+    <article class="horror-text-container">
+      <section class="paragraph">
+        <p>気づいてしまいましたか。</p>
+        <p>あなたがこのページを開いたその瞬間から、すでに「それ」は始まっているのです。</p>
+      </section>
+
+      <section class="paragraph">
+        <p>ネットの海を漂う、噂をご存知でしょうか。</p>
+        <p>『最後まで読んだ者は、例外なく、視線を奪われる』</p>
+        <p>そんな他愛のない怪談話。あなたもどうせ、その類の一種だと、鼻で笑っているのでしょう。</p>
+      </section>
+
+      <section class="paragraph">
+        <p>しかし、考えてみてください。</p>
+        <p>なぜ今、あなたの部屋はこんなに静かなのですか？</p>
+        <p>耳を澄ませば聞こえるはずの、日常の雑音が、妙に遠く感じられませんか？</p>
+      </section>
+
+      <section class="paragraph">
+        <p>それは、あなたがこの「文字」に集中しているからではありません。</p>
+        <p>あなたの意識が、この画面に「引きずり込まれている」からです。</p>
+      </section>
+
+      <section class="paragraph">
+        <p>スクロールする指が、少しだけ重くなっていませんか？</p>
+        <p>引き返すなら、今のうちです。</p>
+        <p>これ以上進むと、脳が「奴ら」の波長と同調してしまいます。</p>
+      </section>
+
+      <section class="paragraph">
+        <p>……まだ読み進めるのですね。</p>
+        <p>忠告はしましたよ。</p>
+      </section>
+
+      <!-- 文字サイズを少し抑えた「大きな文字」のクラス -->
+      <section class="paragraph font-large">
+        <p>ほら。</p>
+        <p>あなたの後ろ。</p>
+      </section>
+
+      <section class="paragraph">
+        <p>気配がしませんか？</p>
+        <p>冷たい空気が、すうっと首筋をなでるような感覚。</p>
+        <p>気のせいだと思いたいのでしょう。そうやって人間は、いつも手遅れになるまで現実から目を背ける。</p>
+      </section>
+
+      <section class="paragraph">
+        <p>画面のガラスに反射しているあなたの顔、</p>
+        <p>本当に、あなた一人の顔ですか？</p>
+        <p>よく見てください。あなたのすぐ肩の後ろに、もう一つの「影」が、じっとこちらを覗き込んでいませんか？</p>
+      </section>
+
+      <!-- 文字サイズを少し抑えた「とても大きな文字」のクラス -->
+      <section class="paragraph font-huge">
+        <p>もう、逃げられません。</p>
+      </section>
+
+      <section class="paragraph">
+        <p>この文章の終わりには、何が待っているのか。</p>
+        <p>あなたがそれを目にしたとき、</p>
+        <p>「それ」もまた、あなたを認識するのです。</p>
+      </section>
+
+      <section class="paragraph">
+        <p>あと数行。</p>
+        <p>心臓の鼓動が速くなっているのが分かりますか？</p>
+        <p>トクン、トクン、トクン、と。</p>
+      </section>
+
+      <section class="paragraph font-huge">
+        <p>さあ、最後の1行です。</p>
+      </section>
+
+      <section class="paragraph text-center">
+        <p>そこにいるのは、だれ？</p>
+      </section>
+      
+      <!-- スクロールの余白 -->
+      <div class="scroll-spacer"></div>
+    </article>
+  </main>
+
+  <!-- ① ジャンプスケア画面 -->
+  <div id="jumpscare-overlay">
+    <div class="noise-bg"></div>
+    <div class="jumpscare-content">
+      <h1 class="scare-title">見ちゃったね♡</h1>
+      <p class="scare-sub">ずっと、あなたを見てたよ。</p>
+      <div class="scare-details">
+        <p>【警告】この端末への侵入に成功しました。</p>
+        <p>あなたの瞳に映る私を、どうか忘れないでね。</p>
+      </div>
+      <div>
+        <button id="show-spoiler-btn">ネタばらしを見る</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ② ネタばらし画面 -->
+  <div id="spoiler-overlay">
+    <div class="spoiler-bg"></div>
+    <div class="spoiler-content">
+      <h1 class="spoiler-title">✨ ネタばらし！ ✨</h1>
+      <p class="spoiler-sub">驚かせてしまってごめんなさい！</p>
+      
+      <!-- 指定された内容に差し替えたネタばらしメッセージ部分 -->
+      <div class="spoiler-details">
+        <p><strong>【安心してください】</strong></p>
+        <p>このウェブサイトは、安全な「ジョークサイト」です。実際の端末への侵入や、情報の抜き取りなどは一切行われておりません。</p>
+        
+        <p><strong>【このサイトの経緯】</strong></p>
+        <p>・<strong>暇つぶし:</strong> 考査勉強してたんですけど、めんどくさくなっちゃって。それで暇つぶしになんか作ろ～と思いこのサイトを作りました。</p>
+        <p>・<strong>友達の悪乗り:</strong> なんか僕の友達がちょっとホラーなことやってたんで、それに乗ろう！と思い、このサイトを作成しました。</p>
+      </div>
+      
+      <p class="spoiler-footer">最後まで読んで、このジョークを体験してくれてありがとうございました！</p>
+      <button id="restart-btn">トップに戻る</button>
+    </div>
+  </div>
+
+  <!-- JSへのリンク -->
+  <script src="script.js"></script>
+</body>
+</html>
